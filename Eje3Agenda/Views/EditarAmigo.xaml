@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Eje3Agenda.Views.EditarAmigo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Eje3Agenda.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <DockPanel Background="White">
+        <StackPanel DockPanel.Dock="Top">
+            <Label>Nombre:</Label>
+            <TextBox Text="{Binding aAmigo.Nombre}"></TextBox>
+            <Label>FechaNacimiento:</Label>
+            <DatePicker SelectedDate="{Binding aAmigo.FechaNacimiento}" SelectedDateFormat="Short">
+
+            </DatePicker>
+            <Label>Telefono:</Label>
+            <TextBox Text="{Binding aAmigo.Telefono}"></TextBox>
+            <Label>Correo:</Label>
+            <TextBox Text="{Binding aAmigo.Correo}"></TextBox>
+        </StackPanel>
+        <WrapPanel>
+            <Button Command="{Binding GuardarCommand}">Actualizar</Button>
+            <Button Command="{Binding CancelarCommand}">Cancelar</Button>
+        </WrapPanel>
+    </DockPanel>
+</UserControl>

@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="Eje3Agenda.Views.VerAgenda"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Eje3Agenda.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <DockPanel>
+        
+        <Grid>
+            <StackPanel Background="White">
+                <StackPanel.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Padding" Value="10px"/>
+                        <Setter Property="FontSize" Value="15px"/>
+                        <Setter Property="Margin" Value="20px 0px 0px 0px"/>
+                    </Style>
+                    <Style TargetType="Label">
+                        <Setter Property="Margin" Value="10px 5px 0px 5px"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Label>Nombre:</Label>
+                <TextBlock Text="{Binding aAmigo.Nombre}"></TextBlock>
+                <Label>Fecha de Nacimiento:</Label>
+                <TextBlock Text="{Binding aAmigo.FechaNacimiento, StringFormat={}{0:MM-dd-yyyy}}"></TextBlock>
+                <Label>Telefono</Label>
+                <TextBlock Text="{Binding aAmigo.Telefono}"></TextBlock>
+                <Label>Correo:</Label>
+                <TextBlock Text="{Binding aAmigo.Correo}"></TextBlock>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</UserControl>
