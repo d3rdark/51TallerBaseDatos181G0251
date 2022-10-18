@@ -38,7 +38,7 @@ namespace Eje3Agenda.Models
             }
             lector.Close();
         }
-
+        // Create
         public void AgregarAmigos(Amigo a)
         {
             var dateandtime = a.FechaNacimiento;
@@ -49,6 +49,7 @@ namespace Eje3Agenda.Models
 
         }
 
+        //Read
         public void CargarDatos()
         {
             //conexion.ConnectionString = "server=localhost;user=root;database=agenda;password=adlogcat45";
@@ -72,7 +73,8 @@ namespace Eje3Agenda.Models
             }
             lector.Close();
         }
-
+        
+        //Update
         public void ActualizarAmigos(Amigo a)
         {
             //update amigos set Nombre = 'Juanito', FechaNacimiento = '2005-09-10', Telefono = '8611124587', Correo = 'juan@gmail.com'  where Id = 6
@@ -84,7 +86,7 @@ namespace Eje3Agenda.Models
         }
 
 
-
+        //Delete
         public void EliminarAmigos(Amigo a)
         {
             /*
