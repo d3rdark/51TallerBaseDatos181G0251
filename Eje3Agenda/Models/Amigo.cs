@@ -13,5 +13,10 @@ namespace Eje3Agenda.Models
         public DateTime FechaNacimiento { get; set; }
         public string Telefono { get; set; }
         public string Correo { get; set; }
+
+        public Amigo()
+        {
+            FechaNacimiento = new DateTime(1980,01,01);
+        }
     }
 }
