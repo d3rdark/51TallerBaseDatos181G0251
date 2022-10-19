@@ -10,14 +10,19 @@
     <Window.DataContext>
         <viewmodels:AmigosViewModels x:Name="avm"></viewmodels:AmigosViewModels>
     </Window.DataContext>
-    <DockPanel>
+    <DockPanel  Background="#313B45">
         <DockPanel Margin="20" >
-            <Button DockPanel.Dock="Bottom" 
-                    Style="{StaticResource btns}" 
-                    Command="{Binding CambiarVistaCommand}"
-                    CommandParameter="Agregar">Agregar</Button>
+            <Button DockPanel.Dock="Bottom" Style="{StaticResource btns}" Command="{Binding CambiarVistaCommand}"
+                    CommandParameter="Agregar">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Image Source="/Assests/agregar-usuario.png" Stretch="Uniform" Width="30px" Margin="0px, 0px, 8px, 0px"/>
+                    <TextBlock Text="Nuevo" FontSize="18"></TextBlock>
+                </StackPanel>
+            </Button>
+            
+            
             <ListBox Style="{StaticResource lststyle}" DisplayMemberPath="Nombre" x:Name="lstAgenda" 
-                      SelectedItem="{Binding aAmigo}" ItemsSource="{Binding AgendaAmigos.DatosAmigos}">
+                       SelectedItem="{Binding aAmigo}" ItemsSource="{Binding AgendaAmigos.DatosAmigos}">
                 <ListBox.ContextMenu>
                     <ContextMenu>
                         <MenuItem Command="{Binding CambiarVistaCommand}" CommandParameter="Editar" Header="Editar"></MenuItem>

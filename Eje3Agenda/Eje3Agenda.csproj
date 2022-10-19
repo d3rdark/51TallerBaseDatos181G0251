@@ -8,8 +8,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assests\agregar-usuario.png" />
+    <None Remove="Assests\amigos.png" />
+    <None Remove="Assests\juventud.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
     <PackageReference Include="MySql.Data" Version="8.0.31" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assests\agregar-usuario.png" />
+    <Resource Include="Assests\amigos.png" />
+    <Resource Include="Assests\juventud.png" />
   </ItemGroup>
 
 </Project>
