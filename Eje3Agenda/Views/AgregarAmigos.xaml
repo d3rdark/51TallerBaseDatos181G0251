@@ -7,11 +7,25 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <DockPanel Background="White">
+        
         <StackPanel DockPanel.Dock="Top">
+            <StackPanel.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="Margin" Value="10px 5px 0px 5px"/>
+                    <Setter Property="FontSize" Value="18px"/>
+                </Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="Margin" Value="20px,0px,30px,0px"/>
+                    <Setter Property="Padding" Value="5px"/>
+                    <Setter Property="FontSize" Value="18"/>
+                </Style>
+            </StackPanel.Resources>
             <Label>Nombre:</Label>
             <TextBox Text="{Binding Amigo.Nombre}"></TextBox>
             <Label>FechaNacimiento:</Label>
-            <DatePicker SelectedDate="{Binding Amigo.FechaNacimiento}" SelectedDateFormat="Short">
+            <DatePicker SelectedDate="{Binding Amigo.FechaNacimiento}" 
+                        SelectedDateFormat="Short" 
+                        Margin="20px,0px,0px,0px" Width="150px" HorizontalAlignment="Left">
 
             </DatePicker>
             <Label>Telefono:</Label>
@@ -19,8 +33,14 @@
             <Label>Correo:</Label>
             <TextBox Text="{Binding Amigo.Correo}"></TextBox>
         </StackPanel>
-        <WrapPanel>
-            <Button Command="{Binding AgregarCommand}">Agregar</Button>
+        <WrapPanel Margin="20px">
+            <WrapPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="FontSize" Value="16px"/>
+                    <Setter Property="Padding" Value="15px, 5px"/>
+                </Style>
+            </WrapPanel.Resources>
+            <Button Command="{Binding AgregarCommand}" Margin="0px, 0px, 10px 0px">Agregar</Button>
             <Button Command="{Binding CancelarCommand}">Cancelar</Button>
         </WrapPanel>
     </DockPanel>
