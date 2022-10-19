@@ -40,8 +40,8 @@
                     <Setter Property="Padding" Value="15px, 5px"/>
                 </Style>
             </WrapPanel.Resources>
-            <Button Command="{Binding AgregarCommand}" Margin="0px, 0px, 10px 0px">Agregar</Button>
-            <Button Command="{Binding CancelarCommand}">Cancelar</Button>
+            <Button Command="{Binding AgregarCommand}" Margin="0px, 0px, 10px 0px" FontWeight="Bold" Background="#0f994f">Agregar</Button>
+            <Button Command="{Binding CancelarCommand}" Background="#d26e7f">Cancelar</Button>
         </WrapPanel>
     </DockPanel>
 </UserControl>
