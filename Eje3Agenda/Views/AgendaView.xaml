@@ -7,7 +7,7 @@
         xmlns:viewmodels="clr-namespace:Eje3Agenda.ViewModels"
         xmlns:models="clr-namespace:Eje3Agenda.Models"
         mc:Ignorable="d"
-        Title="AgendaView" Height="450" Width="800">
+        Title="AgendaView" Height="650" Width="980" WindowStartupLocation="CenterScreen">
     <Window.DataContext>
         <viewmodels:AmigosViewModels x:Name="avm"></viewmodels:AmigosViewModels>
     </Window.DataContext>
@@ -22,16 +22,22 @@
             </Button>
             
             
-            <ListBox Style="{StaticResource lststyle}" DisplayMemberPath="Nombre" x:Name="lstAgenda" 
-                       SelectedItem="{Binding Amigo}"  ItemsSource="{Binding AgendaAmigos.DatosAmigos}">
+            <ListBox Style="{StaticResource lststyle}"  x:Name="lstAgenda" 
+                       SelectedItem="{Binding Amigo}" ItemsSource="{Binding AgendaAmigos.DatosAmigos}">
                 <ListBox.ContextMenu>
                     <ContextMenu>
                         <MenuItem Command="{Binding CambiarVistaCommand}" CommandParameter="Editar" Header="Editar"></MenuItem>
                         <MenuItem Click="MenuItem_Click" Header="Eliminar"></MenuItem>
                     </ContextMenu>
-
-
                 </ListBox.ContextMenu>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Margin="0px, 10px, 5px, 10px">
+                            <TextBlock Text="{Binding Nombre}" ></TextBlock>
+                            <Image Source="/Assests/juventud.png" Width="25"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
             </ListBox>
         </DockPanel>
         <ContentControl Margin="0,20,20,20" >
