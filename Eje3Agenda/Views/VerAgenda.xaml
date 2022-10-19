@@ -24,13 +24,13 @@
                         </Style>
                     </StackPanel.Resources>
                     <Label>Nombre:</Label>
-                    <TextBlock Text="{Binding aAmigo.Nombre}"></TextBlock>
+                    <TextBlock Text="{Binding Amigo.Nombre}"></TextBlock>
                     <Label>Fecha de Nacimiento:</Label>
-                    <TextBlock Text="{Binding aAmigo.FechaNacimiento, StringFormat={}{0:MM-dd-yyyy}}"></TextBlock>
+                    <TextBlock Text="{Binding Amigo.FechaNacimiento, StringFormat={}{0:MM-dd-yyyy}}"></TextBlock>
                     <Label>Telefono</Label>
-                    <TextBlock Text="{Binding aAmigo.Telefono}"></TextBlock>
+                    <TextBlock Text="{Binding Amigo.Telefono}"></TextBlock>
                     <Label>Correo:</Label>
-                    <TextBlock Text="{Binding aAmigo.Correo}"></TextBlock>
+                    <TextBlock Text="{Binding Amigo.Correo}"></TextBlock>
                 </StackPanel>
             </Border>
             

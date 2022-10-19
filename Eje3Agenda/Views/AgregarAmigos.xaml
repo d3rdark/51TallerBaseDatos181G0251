@@ -9,15 +9,15 @@
     <DockPanel Background="White">
         <StackPanel DockPanel.Dock="Top">
             <Label>Nombre:</Label>
-            <TextBox Text="{Binding aAmigo.Nombre}"></TextBox>
+            <TextBox Text="{Binding Amigo.Nombre}"></TextBox>
             <Label>FechaNacimiento:</Label>
-            <DatePicker SelectedDate="{Binding aAmigo.FechaNacimiento}" SelectedDateFormat="Short">
+            <DatePicker SelectedDate="{Binding Amigo.FechaNacimiento}" SelectedDateFormat="Short">
 
             </DatePicker>
             <Label>Telefono:</Label>
-            <TextBox Text="{Binding aAmigo.Telefono}"></TextBox>
+            <TextBox Text="{Binding Amigo.Telefono}"></TextBox>
             <Label>Correo:</Label>
-            <TextBox Text="{Binding aAmigo.Correo}"></TextBox>
+            <TextBox Text="{Binding Amigo.Correo}"></TextBox>
         </StackPanel>
         <WrapPanel>
             <Button Command="{Binding AgregarCommand}">Agregar</Button>

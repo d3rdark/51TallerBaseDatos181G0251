@@ -17,12 +17,12 @@ namespace Eje3Agenda.ViewModels
 
 
         private Amigo? amigo;
-        public Amigo? aAmigo {
+        public Amigo? Amigo {
             get { return amigo; }
             set
             {
                 amigo = value;
-                PropertyChange("aAmigo");
+                PropertyChange("Amigo");
             }
         }
         public string? error { get; set; }
@@ -48,9 +48,9 @@ namespace Eje3Agenda.ViewModels
         private void Guardar()
         {
             //metodo para actualizar via
-            if (aAmigo != null)
+            if (Amigo != null)
             {
-                AgendaAmigos.ActualizarAmigos(aAmigo);
+                AgendaAmigos.ActualizarAmigos(Amigo);
                 Vista = "Ver";
             }
             PropertyChange();
@@ -66,7 +66,7 @@ namespace Eje3Agenda.ViewModels
             //Verificamos que sea correcto
             if (Vista == "Agregar")
             {
-                aAmigo = new Amigo();
+                Amigo = new Amigo();
             }
 
             if (Vista == "Editar")
@@ -83,7 +83,7 @@ namespace Eje3Agenda.ViewModels
                     };
                     posicionAmigoEditar = AgendaAmigos.DatosAmigos.IndexOf(amigo);
 
-                    aAmigo = clon;
+                    Amigo = clon;
                 }
             }
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Vista)));
@@ -92,20 +92,20 @@ namespace Eje3Agenda.ViewModels
         public void Cancelar()
         {
             CambiarVista("Ver");
-            aAmigo = null;
+            Amigo = null;
         }
 
         public void Agregar()
         {
-            if (aAmigo != null)
+            if (Amigo != null)
             {
                 error = "";
-                if (string.IsNullOrWhiteSpace(aAmigo.Nombre))
+                if (string.IsNullOrWhiteSpace(Amigo.Nombre))
                 {
                     error = "El Nombre debe de ser insertado";
                     PropertyChange("error");
                 }
-                if (string.IsNullOrWhiteSpace(aAmigo.Telefono))
+                if (string.IsNullOrWhiteSpace(Amigo.Telefono))
                 {
                     error = "El telefono debe de ser insertado";
                     PropertyChange("error");
@@ -113,7 +113,7 @@ namespace Eje3Agenda.ViewModels
 
                 if (error == "")
                 {
-                    AgendaAmigos.AgregarAmigos(aAmigo);
+                    AgendaAmigos.AgregarAmigos(Amigo);
                     Vista = "Ver";
                 }
                 PropertyChange();

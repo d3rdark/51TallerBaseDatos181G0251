@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Eje3Agenda.Views"
         xmlns:viewmodels="clr-namespace:Eje3Agenda.ViewModels"
+        xmlns:models="clr-namespace:Eje3Agenda.Models"
         mc:Ignorable="d"
         Title="AgendaView" Height="450" Width="800">
     <Window.DataContext>
@@ -22,7 +23,7 @@
             
             
             <ListBox Style="{StaticResource lststyle}" DisplayMemberPath="Nombre" x:Name="lstAgenda" 
-                       SelectedItem="{Binding aAmigo}" ItemsSource="{Binding AgendaAmigos.DatosAmigos}">
+                       SelectedItem="{Binding Amigo}"  ItemsSource="{Binding AgendaAmigos.DatosAmigos}">
                 <ListBox.ContextMenu>
                     <ContextMenu>
                         <MenuItem Command="{Binding CambiarVistaCommand}" CommandParameter="Editar" Header="Editar"></MenuItem>
