@@ -47,7 +47,7 @@
                                        VerticalAlignment="Center"
                                        FontSize="30"
                                        TextWrapping="Wrap"
-                                       >Seleccione a un amigo</TextBlock>
+                                       >Aun no se ha seleccionado a un amigo.</TextBlock>
                         </Setter.Value>
                     </Setter>
                 </DataTrigger>
